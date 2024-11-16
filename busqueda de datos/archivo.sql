@@ -1,4 +1,4 @@
-select EDO,MUN,PAR,CENTRO, count(MESA) as "MESA/S", sum(EG) as "VOTOS A EDMUNDO", 
-sum(NM) as "VOTOS A MADURO",sum(LM) as "VOTOS A LUIS MARTINEZ",sum(AE) as "VOTOS A ECARRI" from resultados    
-group by CENTRO
-order by sum(AE) desc
+select EDO,sum(VOTOS_VALIDOS) as "VOTOS_TOTALES", sum(EG) as "EG", 
+sum(NM) as "NM",sum(LM) as "LM",sum(JOBR) as "JOBR",
+sum(JABE) as "JABE",sum(BERA) as "BERA",sum(CF) as "CF",sum(DC) as "DC",sum(EM) as "EM",sum(AE) as "AE" from resultados    
+group by EDO
